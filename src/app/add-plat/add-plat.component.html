@@ -1,0 +1,34 @@
+<section class="regervation_part section_padding" style="margin-top:100px">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+                    <h2>{{title}}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="regervation_part_iner">
+                    <form #addPlateForm="ngForm" (ngSubmit)="addOrEditPlate()">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="plateName" placeholder="Plate Name *" [(ngModel)]="plate.plateName" [ngModelOptions]="{standalone : true}">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="number" class="form-control" id="price" placeholder="Price *" [(ngModel)]="plate.price" [ngModelOptions]="{standalone : true}">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <textarea name="description" class="form-control" id="description" placeholder="description *" cols="30" rows="10" [(ngModel)]="plate.description" [ngModelOptions]="{standalone : true}">
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="regerv_btn">
+                            <button  class="btn_4">{{title}}</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
